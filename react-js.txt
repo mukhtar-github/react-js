@@ -1,1 +1,7 @@
-pwd - /home/mukhtar/Documents/react-js
+
+** Terminal
+* pwd - /home/mukhtar/Documents/react-js (root-directory)
+* ls - LICENSE  react-js.txt  README.md
+* cd - navigate to a folder
+* cd .. - navigate back to parent
+* ls -a - show hidden folders - .  ..  .git  .gitignore  LICENSE  react-js.txt  README.md
