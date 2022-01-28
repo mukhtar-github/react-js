@@ -6,12 +6,25 @@
 * ls -a - show hidden folders - .  ..  .git  .gitignore  LICENSE  react-js.txt  README.md
 * clear - clear the console
 * mkdir - make a new directory
+
+**VS Code Short-cut
 * ctrl+` - Integrated Terminal
+* ctrl+B - To toggle btw side-bar & VS Code Editor. 
 
 **npm install to get back packages after downloading a project from github
 
 ** To create our first component, we only need two things, an import from
-react dependency, and a function.
+react dependency, and a function in our index.js file.
+
+
+
+
+
+
+
+
+
+
 
 import React from 'react';
 import ReactDOM from 'react-dom';
