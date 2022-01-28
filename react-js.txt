@@ -1,4 +1,3 @@
-
 ** Terminal
 * pwd - /home/mukhtar/Documents/react-js (root-directory)
 * ls - LICENSE  react-js.txt  README.md
