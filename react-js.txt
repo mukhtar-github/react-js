@@ -7,3 +7,5 @@
 * clear - clear the console
 * mkdir - make a new directory
 * ctrl+` - Integrated Terminal
+
+**npm install to get back packages after downloading a project from github
