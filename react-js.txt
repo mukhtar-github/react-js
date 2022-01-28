@@ -14,11 +14,11 @@
 **npm install to get back packages after downloading a project from github
 
 ** To create our first component, we only need two things, an import from
-react dependency, and a function in our index.js file.
+react dependency, and a function in our index.js file, and that function is our component.
 
 ** The first letter of the name of a function in a react component must be capitalized.
 - index.js is a JavaScript entry point.
-
+- In the ReactDom.render(<Greeting />, ) the tag must be self closed. 
 
 
 

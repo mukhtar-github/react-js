@@ -6,4 +6,4 @@ function Greeting() {
 }
 
 
-ReactDom.render(<Greeting/>, document.getElementById('root'))
+ReactDom.render(<Greeting />, document.getElementById('root'))
