@@ -5,3 +5,6 @@
 * cd - navigate to a folder
 * cd .. - navigate back to parent
 * ls -a - show hidden folders - .  ..  .git  .gitignore  LICENSE  react-js.txt  README.md
+* clear - clear the console
+* mkdir - make a new directory
+* ctrl+` - Integrated Terminal
