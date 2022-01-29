@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-// Mini Book Project
+// CSS
+import './index.css';
 
 function BookList() {
   return <section>
