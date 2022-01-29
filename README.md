@@ -57,3 +57,22 @@ ReactDom.render(<Greeting />, document.getElementById("root"));
 
 - Use proper html semantics or Fragment => React.Fragment or (<></>).
 - Formatting - When returning JSX in a component function, it should be in a closed bracket or the html tag should be on the same line with the return key word to avoid error in react.
+
+## Nested Components and React Tools
+
+```javascript
+import React from "react";
+import ReactDom from "react-dom";
+
+// Nested Components, React Tools
+
+function Greeting() {
+  return (
+    <div>
+      <h1>hello world</h1>
+    </div>
+  );
+}
+
+ReactDom.render(<Greeting />, document.getElementById("root"));
+```
