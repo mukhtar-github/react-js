@@ -268,7 +268,7 @@ ReactDom.render(<BookList />, document.getElementById("root"));
 
 When we copy and paste the instances of the Book component, we'll still get the same result. With Props, we can get different instances and values as we set them.
 
-So props is a parameter in our component function, as it is that you can pass in any name as a parameter in a javascript function. Props is an object can be accessed
+So props is a parameter in our component function, as it is that you can pass in any name as a parameter in a javascript function. Props is an object can be accessed by passing props.key to acomponent function to access the value.
 
 ```javascript
 import React from "react";
