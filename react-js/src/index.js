@@ -5,15 +5,19 @@ import ReactDom from "react-dom";
 import './index.css';
 
 function BookList() {
-  return <section>
+  return (
+    <section className='booklist'>
     <Book />
-  </section>;
-};
+    <Book />
+    <Book />
+    </section>
+  );
+}
 
 const Book = () => {
   return (
   <article>
-    <Image></Image>
+    <Image />
     <Title />
     <Author />
     </article>
