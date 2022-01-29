@@ -300,6 +300,7 @@ const Book = (props) => {
       <h4>{author}</h4>
       <p>{props.job}</p>
       <p>{props.title}</p>
+      <p>{props.number}</p>
     </article>
     // Browser Output for 1st Book
     // Image
@@ -312,6 +313,7 @@ const Book = (props) => {
     // I Love You to the Moon and Back
     // Amelia Hepworth
     // random title
+    // 22
   );
 };
 
