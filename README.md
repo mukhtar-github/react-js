@@ -20,7 +20,7 @@ ReactDom.render(<Greeting />, document.getElementById("root"));
 
 - The first letter of the name of a react component function must be capitalized.
 - The JavaScript's entry point is the index.js file.
-- In the ReactDom.render(<Greeting />, ) the tag must be self closed.
+- In the ReactDom.render(`<Greeting />, ) the tag must be self closed.
 - HTML is referred to as JSX in reactjs, because it has additional functionalities.
 - What is under the hood of the component function is
 
@@ -94,6 +94,8 @@ import ReactDom from "react-dom";
 function BookList() {
   return (
     <section>
+      <Book />
+      <Book />
       <Book />
     </section>
   );
