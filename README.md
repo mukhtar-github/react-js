@@ -141,14 +141,17 @@ function BookList() {
       <Book />
       <Book />
       <Book />
+      <Book />
+      <Book />
+      <Book />
     </section>
   );
 }
 
 const Book = () => {
   return (
-    <article>
-      <Image></Image>
+    <article className="book">
+      <Image />
       <Title />
       <Author />
     </article>

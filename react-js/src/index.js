@@ -10,13 +10,16 @@ function BookList() {
     <Book />
     <Book />
     <Book />
+    <Book />
+    <Book />
+    <Book />
     </section>
   );
 }
 
 const Book = () => {
   return (
-  <article>
+  <article className='book'>
     <Image />
     <Title />
     <Author />
