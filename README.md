@@ -92,8 +92,16 @@ import ReactDom from "react-dom";
 // Mini Book Project
 
 function BookList() {
-  return <section>this is a booList</section>;
+  return (
+    <section>
+      <Book />
+    </section>
+  );
 }
+
+const Book = () => {
+  return <article>this is a book</article>;
+};
 
 ReactDom.render(<BookList />, document.getElementById("root"));
 ```

@@ -4,7 +4,17 @@ import ReactDom from "react-dom";
 // Mini Book Project
 
 function BookList() {
-  return <section>this is a booList</section>;
+  return <section>
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+  </section>;
+}
+
+const Book = () => {
+  return <article>this is a car</article>
 }
 
 ReactDom.render(<BookList />, document.getElementById("root"));
