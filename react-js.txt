@@ -10,6 +10,7 @@
 **VS Code Short-cut
 * ctrl+` - Integrated Terminal
 * ctrl+B - To toggle btw side-bar & VS Code Editor. 
+* ctrl+/ - To comment out.
 
 **Do a npm install, to get back packages after downloading/forking/cloning a project from github.
 
