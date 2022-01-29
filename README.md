@@ -266,7 +266,9 @@ ReactDom.render(<BookList />, document.getElementById("root"));
 
 ## Props
 
-When we copy and paste the instances of the Book component, we'll still get the same result. With Props, we can have different instances
+When we copy and paste the instances of the Book component, we'll still get the same result. With Props, we can get different instances and values as we set them.
+
+So props is a parameter in our component function, as it is that you can pass in any name as a parameter in a javascript function. Props is an object can be accessed
 
 ```javascript
 import React from "react";
@@ -283,18 +285,33 @@ const img =
 function BookList() {
   return (
     <section className="booklist">
-      <Book />
+      <Book job="developer" />
+      <Book title="random title" number={22} />
     </section>
   );
 }
 
-const Book = () => {
+const Book = (props) => {
+  //   console.log(props);
   return (
     <article className="book">
       <img src={img} alt="" />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      <p>{props.job}</p>
+      <p>{props.title}</p>
     </article>
+    // Browser Output for 1st Book
+    // Image
+    // I Love You to the Moon and Back
+    // Amelia Hepworth
+    // developer
+
+    // Browser Output for 2nd Book
+    // Image
+    // I Love You to the Moon and Back
+    // Amelia Hepworth
+    // random title
   );
 };
 
