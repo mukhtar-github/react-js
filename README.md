@@ -277,6 +277,8 @@ import "./index.css";
 // Setup Vars
 const title = "I Love You to the Moon and Back";
 const author = "Amelia Hepworth";
+const img =
+  "https://images-na.ssl-images-amazon.com/images/I/8144Vic9C5L._AC_UL604_SR604,400_.jpg";
 
 function BookList() {
   return (
@@ -289,14 +291,9 @@ function BookList() {
 const Book = () => {
   return (
     <article className="book">
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/8144Vic9C5L._AC_UL604_SR604,400_.jpg"
-        alt=""
-      />
+      <img src={img} alt="" />
       <h1>{title}</h1>
-      <h4>{author.toUpperCase()}</h4>
-      {/* <p>{let x = 6}</p> */}
-      <p>{6 + 6}</p>
+      <h4>{author}</h4>
     </article>
   );
 };

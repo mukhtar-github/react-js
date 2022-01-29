@@ -21,9 +21,7 @@ const Book = () => {
     <article className="book">
       <img src= {img} alt="" />
       <h1>{title}</h1>
-      <h4>{author.toUpperCase()}</h4>
-      {/* <p>{let x = 6}</p> */}
-      <p>{6 + 6}</p>
+      <h4>{author}</h4>
     </article>
   );
 };
