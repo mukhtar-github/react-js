@@ -41,7 +41,7 @@ import ReactDom from "react-dom";
 // div / section / article or Fragment
 // use camelCase for html attribute
 // className instead of class
-// close every element
+// close every element with a closing tag
 // formatting
 
 function Greeting() {
@@ -54,3 +54,6 @@ function Greeting() {
 
 ReactDom.render(<Greeting />, document.getElementById("root"));
 ```
+
+- Use proper html semantics or Fragment => React.Fragment or (<></>).
+- Formatting - When returning JSX in a component function, it should be in a closed bracket or the html tag should be on the same line with the return key word to avoid error in react.
