@@ -246,6 +246,7 @@ function BookList() {
 // JSX Javascript
 const Book = () => {
   const title = "I Love You to the Moon and Back";
+  const author = "Amelia Hepworth";
   return (
     <article className="book">
       <img
@@ -253,7 +254,7 @@ const Book = () => {
         alt=""
       />
       <h1>{title}</h1>
-      <h4>Amelia Hepworth</h4>
+      <h4>{author}</h4>
     </article>
   );
 };
