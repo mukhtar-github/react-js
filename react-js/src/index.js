@@ -1,20 +1,10 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-// Nested Components, React Tools
+// Mini Book Project
 
-function Greeting() {
-  return (
-    <div>
-      <Person />
-      <Message />
-    </div>
-  );
+function BookList() {
+  return <section>this is a booList</section>;
 }
 
-const Person = () => <h2>John Doe</h2>;
-const Message = () => {
-  return <p>This is the message</p>;
-};
-
-ReactDom.render(<Greeting />, document.getElementById("root"));
+ReactDom.render(<BookList />, document.getElementById("root"));
