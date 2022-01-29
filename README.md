@@ -76,7 +76,9 @@ function Greeting() {
 }
 
 const Person = () => <h2>John Doe</h2>;
-const Message = () => <p>This is the message</p>;
+const Message = () => {
+  return <p>This is the message</p>;
+};
 
 ReactDom.render(<Greeting />, document.getElementById("root"));
 ```
