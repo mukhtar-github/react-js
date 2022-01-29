@@ -31,7 +31,7 @@ const Image = () => {
   return <img src="https://images-na.ssl-images-amazon.com/images/I/8144Vic9C5L._AC_UL604_SR604,400_.jpg" alt="" />
 };
 
-const Title = () => <h1>I Love You to the Moon and Back</h1>
-const Author = () => <h4>Amelia Hepworth</h4>
+const Title = () => <h1>I Love You to the Moon and Back</h1>;
+const Author = () => <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }} >Amelia Hepworth</h4>;
 
 ReactDom.render(<BookList />, document.getElementById("root"));
