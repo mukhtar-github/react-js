@@ -365,7 +365,7 @@ const Book = (props) => {
 ## Props Destructuring
 
 ```javascript
-const Book = (props) => {
+const Book = ({ img, title, author }) => {
   const { img, title, author } = props;
   return (
     <article className="book">
