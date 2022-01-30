@@ -543,6 +543,8 @@ const Book = (props) => {
 
 React would want to keep track of changes, ranging from adding, removing, and updating items in our list.
 
+> _Warning: Each child in a list should have a unique "key" prop._
+
 So, we use key as a keyword to assign unique values to our list, as long as they're changing, but some times index is being used, if one is sure that the items in array are not goig to change.
 
 ```javascript
@@ -569,7 +571,7 @@ const books = [
 
 function BookList() {
   return (
-    <section className="booklist">{books.map((book) => {
+    <section className="booklist">{books.map((book, index) => {
       return <Book key={ book.id } book={book}/>
     })}</section>
   );
