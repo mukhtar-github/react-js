@@ -376,3 +376,41 @@ const Book = ({ img, title, author }) => {
   );
 };
 ```
+
+## Props - Childeren
+
+The Children Props is anything that we render between the opening and the closing tag of the component function. For example, for the first or second book, you can pick which ever you like.
+
+I will like to add description, but only one of them, not both. Because, if we want both to have description, we should just add that to the property of the component function.
+
+So we'll go with the firstBook, but we're not going to self close the tags, because children props will between the closing and opening tags.
+
+```javascript
+function BookList() {
+  return (
+    <section className="booklist">
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      ></Book>
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
+    </section>
+  );
+}
+
+const Book = ({ img, title, author }) => {
+  const { img, title, author } = props;
+  return (
+    <article className="book">
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+    </article>
+  );
+};
+```
