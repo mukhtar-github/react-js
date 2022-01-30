@@ -383,7 +383,7 @@ The Children Props is anything that we render between the opening and the closin
 
 I will like to add description, but only one of them, not both. Because, if we want both to have description, we should just add that to the property of the component function.
 
-So we'll go with the firstBook, but we're not going to self close the tags, because children props will between the closing and opening tags.
+So we'll go with the firstBook, but we're not going to self close the tags, because children props will be what we render between the closing and opening tags. And that can be forms, buttons, etc.
 
 ```javascript
 function BookList() {
