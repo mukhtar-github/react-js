@@ -12,6 +12,11 @@ const books = [
   img: 'https://m.media-amazon.com/images/I/71aLultW5EL._AC_UY218_.jpg',
   title: 'Our Class is a Family',
   author: 'Shannon Olsen and Sandie Sonke'
+},
+{
+  img: 'https://m.media-amazon.com/images/I/71gGPRRlyTL._AC_UY218_.jpg',
+  title: 'The Vanishing Half: A Novel',
+  author: 'Brit Bennett, Shayna Small, et al'
 }
 ];
 
@@ -19,18 +24,13 @@ function BookList() {
   return (
     <section className="booklist">{books.map((book) => {
     const { img, title, author } = book;
-      return (
-        <div>
-          <h3>{title}</h3>
-          <h6>{author}</h6>
-        </div>
-      )
+      return <Book book={book}/>
     })}</section>
   );
 }
 
 const Book = (props) => {
-  const { img, title, author } = props;
+  const { img, title, author } = props.book;
   return (
     <article className="book">
       <img src={img} alt="" />

@@ -457,6 +457,8 @@ Abba;
 
 We should note that however, when mapping in an array, the returned value of the map function is the total number items in that array.
 
+And one key point to note also is that, we cannot render the book object directly from the map function, that's why we have to use the properties of the book object.
+
 ```javascript
 const books = [
   {
@@ -498,4 +500,42 @@ function BookList() {
     })}</section>
   );
 }
+
+const books = [
+  {
+  img: "https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+  title: "I Love You to the Moon and Back",
+  author: "Amelia Hepworth"
+},
+{
+  img: 'https://m.media-amazon.com/images/I/71aLultW5EL._AC_UY218_.jpg',
+  title: 'Our Class is a Family',
+  author: 'Shannon Olsen and Sandie Sonke'
+},
+{
+  img: 'https://m.media-amazon.com/images/I/71gGPRRlyTL._AC_UY218_.jpg',
+  title: 'The Vanishing Half: A Novel',
+  author: 'Brit Bennett, Shayna Small, et al'
+}
+];
+
+function BookList() {
+  return (
+    <section className="booklist">{books.map((book) => {
+    const { img, title, author } = book;
+      return <Book book={book}/>
+    })}</section>
+  );
+}
+
+const Book = (props) => {
+  const { img, title, author } = props.book;
+  return (
+    <article className="book">
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+    </article>
+  );
+};
 ```
