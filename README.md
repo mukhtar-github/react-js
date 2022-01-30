@@ -410,13 +410,15 @@ function BookList() {
   );
 }
 
-const Book = ({ img, title, author }) => {
-  const { img, title, author } = props;
+const Book = ({ img, title, author, children }) => {
+  // const { img, title, author } = props;
   return (
     <article className="book">
       <img src={img} alt="" />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      {children} - The position is, it will appear below title and author in the
+      UI, but we can render it anywhere we like in the UI.
     </article>
   );
 };
