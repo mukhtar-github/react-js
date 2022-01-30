@@ -545,7 +545,7 @@ React would want to keep track of changes, ranging from adding, removing, and up
 
 > _Warning: Each child in a list should have a unique "key" prop._
 
-So, we use key as a keyword to assign unique values to our list, as long as they're changing, but some times index is being used, if one is sure that the items in array are not goig to change.
+So, to fix this colsole error, we use key prop with unique values to our list, as long as they're changing. But sometimes index keyword because in the map you can access index, if one is sure that the items in the array are not goig to be changing.
 
 ```javascript
 const books = [
@@ -553,28 +553,61 @@ const books = [
     id: 1,
     img: "https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
     title: "I Love You to the Moon and Back",
-    author: "Amelia Hepworth"
+    author: "Amelia Hepworth",
   },
   {
     id: 2,
-    img: 'https://m.media-amazon.com/images/I/71aLultW5EL._AC_UY218_.jpg',
-    title: 'Our Class is a Family',
-    author: 'Shannon Olsen and Sandie Sonke'
+    img: "https://m.media-amazon.com/images/I/71aLultW5EL._AC_UY218_.jpg",
+    title: "Our Class is a Family",
+    author: "Shannon Olsen and Sandie Sonke",
   },
   {
     id: 3,
-    img: 'https://m.media-amazon.com/images/I/71gGPRRlyTL._AC_UY218_.jpg',
-    title: 'The Vanishing Half: A Novel',
-    author: 'Brit Bennett, Shayna Small, et al'
-  }
+    img: "https://m.media-amazon.com/images/I/71gGPRRlyTL._AC_UY218_.jpg",
+    title: "The Vanishing Half: A Novel",
+    author: "Brit Bennett, Shayna Small, et al",
+  },
 ];
 
 function BookList() {
   return (
-    <section className="booklist">{books.map((book, index) => {
-      return <Book key={ book.id } book={book}/>
-    })}</section>
+    <section className="booklist">
+      {books.map((book, index) => {
+        return <Book key={book.id} book={book} />;
+      })}
+    </section>
   );
 }
-...
+// key={ index }
+const Book = (props) => {
+  const { img, title, author } = props.book;
+  return (
+    <article className="book">
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+    </article>
+  );
+};
+// Or Using Spread Operator
+function BookList() {
+  return (
+    <section className="booklist">
+      {books.map((book, index) => {
+        return <Book key={book.id} {...book} />;
+      })}
+    </section>
+  );
+}
+
+const Book = (props) => {
+  const { img, title, author } = props;
+  return (
+    <article className="book">
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+    </article>
+  );
+};
 ```
