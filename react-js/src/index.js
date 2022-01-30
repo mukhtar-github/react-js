@@ -20,7 +20,7 @@ function BookList() {
   return (
     <section className="booklist">
       <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} >
-        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eos quas accusantium iusto ex sint voluptatem? Repellendus tenetur ex reiciendis ullam nam asperiores recusandae, facilis voluptatum accusamus cum ipsam molestias?</p>
       </Book>
       <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} />
     </section>
