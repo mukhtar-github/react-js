@@ -452,3 +452,50 @@ Musa;
 Isa;
 Abba;
 ```
+
+## Proper List
+
+We should note that however, when mapping in an array, the returned value of the map function is the total number items in that array.
+
+```javascript
+const books = [
+  {
+  img: "https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+  title: "I Love You to the Moon and Back",
+  author: "Amelia Hepworth"
+},
+{
+  img: 'https://m.media-amazon.com/images/I/71aLultW5EL._AC_UY218_.jpg',
+  title: 'Our Class is a Family',
+  author: 'Shannon Olsen and Sandie Sonke'
+}
+];
+
+function BookList() {
+  return (
+    <section className="booklist">{books.map((book) => {
+      return (
+        <div>
+          <h3>{book.title}</h3>
+          <h6>{book.author}</h6>
+        </div>
+      )
+    })}</section>
+  );
+}
+// or
+function BookList() {
+  return (
+    <section className="booklist">{books.map((book) =>
+    const { img, title, author } = book;
+    {
+      return (
+        <div>
+          <h3>{title}</h3>
+          <h6>{author}</h6>
+        </div>
+      )
+    })}</section>
+  );
+}
+```

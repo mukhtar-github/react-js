@@ -14,15 +14,18 @@ const books = [
   author: 'Shannon Olsen and Sandie Sonke'
 }
 ];
-const names = ['Musa', 'Isa', 'Abba'];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>
-});
-console.log(newNames);
 
 function BookList() {
   return (
-    <section className="booklist">{newNames}</section>
+    <section className="booklist">{books.map((book) => {
+    const { img, title, author } = book;
+      return (
+        <div>
+          <h3>{title}</h3>
+          <h6>{author}</h6>
+        </div>
+      )
+    })}</section>
   );
 }
 
