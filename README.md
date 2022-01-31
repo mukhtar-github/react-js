@@ -1,6 +1,8 @@
 # React-js
 
-## First Component in Details
+## React Basics
+
+### First Component in Details
 
 To create our first component, we only need two things, an import from react dependency, and a function in our index.js file, and that function is our component, which is a stateless (or Dom for now) functional component that must always return JSX.
 
@@ -30,7 +32,7 @@ const Greeting = () => {
 }
 ```
 
-## JSX Rules
+### JSX Rules
 
 ```javascript
 import React from "react";
@@ -58,7 +60,7 @@ ReactDom.render(<Greeting />, document.getElementById("root"));
 - Use proper html semantics or Fragment => React.Fragment or (<></>).
 - Formatting - When returning JSX in a component function, it should be in a closed bracket or the html tag should be on the same line with the return key word to avoid error in react.
 
-## Nested Components and React Tools
+### Nested Components and React Tools
 
 ```javascript
 import React from "react";
@@ -83,7 +85,7 @@ const Message = () => {
 ReactDom.render(<Greeting />, document.getElementById("root"));
 ```
 
-## Mini Book Project
+### Mini Book Project
 
 ```javascript
 import React from "react";
@@ -126,7 +128,7 @@ const Author = () => <h4>Amelia Hepworth</h4>;
 ReactDom.render(<BookList />, document.getElementById("root"));
 ```
 
-## CSS Basics
+### CSS Basics
 
 ```javascript
 import React from "react";
@@ -173,7 +175,7 @@ const Author = () => <h4>Amelia Hepworth</h4>;
 ReactDom.render(<BookList />, document.getElementById("root"));
 ```
 
-## JSX CSS
+### JSX CSS
 
 We can also add our css directly in the JSX. So we need to add a style attribute to the element we're syling.
 
@@ -229,7 +231,7 @@ const Author = () => (
 ReactDom.render(<BookList />, document.getElementById("root"));
 ```
 
-## JSX Javascript
+### JSX Javascript
 
 ```javascript
 import React from "react";
@@ -264,7 +266,7 @@ const Book = () => {
 ReactDom.render(<BookList />, document.getElementById("root"));
 ```
 
-## Props
+### Props
 
 When we copy and paste the instances of the Book component, we'll still get the same result. With Props, we can get different instances and values as we set them.
 
@@ -362,7 +364,7 @@ const Book = (props) => {
 };
 ```
 
-## Props Destructuring
+### Props Destructuring
 
 ```javascript
 const Book = ({ img, title, author }) => {
@@ -377,7 +379,7 @@ const Book = ({ img, title, author }) => {
 };
 ```
 
-## Props - Childeren
+### Props - Childeren
 
 The Children Props is anything that we render between the opening and the closing tag of the component function. For example, for the first or second book, you can pick which ever you like.
 
@@ -435,7 +437,7 @@ const Book = (props) => {
 };
 ```
 
-## Simple List
+### Simple List
 
 ```javascript
 const names = ["Musa", "Isa", "Abba"];
@@ -453,7 +455,7 @@ Isa;
 Abba;
 ```
 
-## Proper List
+### Proper List
 
 We should note that however, when mapping in an array, the returned value of the map function is the total number items in that array.
 
@@ -539,7 +541,7 @@ const Book = (props) => {
 };
 ```
 
-## Key Prop And Spread Operator
+### Key Prop And Spread Operator
 
 React would want to keep track of changes, ranging from adding, removing, and updating items in our list.
 
@@ -612,7 +614,7 @@ const Book = (props) => {
 };
 ```
 
-## Event Basics
+### Event Basics
 
 In to Setup events in react, all we need is an _attribute and the eventHandler_. The difference from Javascript is that since we're using the attributes inline we need to use camelCase.
 
@@ -651,7 +653,7 @@ const Book = ({ img, title, author }) => {
   );
 };
 
-// complex Example
+// Complex Example
 const Book = ({ img, title, author }) => {
   const complexExample = (author) => {
     console.log(author);
@@ -721,7 +723,7 @@ const Book = ({ img, title, author }) => {
 };
 ```
 
-## Imports and Exports Statements
+### Imports and Exports Statements
 
 We have the named Exports and the default Exports.
 
@@ -729,10 +731,13 @@ We have the named Exports and the default Exports.
 // Named Exports Example
 export const books = [];
 
-// Importing Named Exports Example
-import { books } from "./books"; // We don't add the .js extention when importing javascript files in react.
+// Importing Named Exports into index.js file.
+// The name (books) cannot be changed in the index.js file, since it is a named export not a default export.
+import { books } from "./books";
 
-// Using VS Code extensions for react - ES7+ React/Redux/React-Native snippets, we can create our component using rafce(regular arror function component export) shortcut, using export default.
+// Using VS Code extensions for react - ES7+ React/Redux/React-Native snippets, we can create our component using rafce(regular arror function component export) shortcut.
+
+// Default Exports Example using rafce.
 import React from "react";
 
 const Book = () => {
@@ -740,4 +745,37 @@ const Book = () => {
 };
 
 export default Book;
+
+// Importing Default Exports into index.js file.
+// The name of the component function can be changed in the index.js file, since it is a default export.
+import Book from "./Book";
 ```
+
+### Free Hosting
+
+Using Netlify to host our application.
+
+```javascript
+npm run build
+```
+
+## Advanced React
+
+- useState
+- useEffect
+- Conditional Rendering
+- Forms
+- useRef
+- useReducer
+- Prop Drilling
+- Context API / useContext ...
+
+### Advanced Intro
+
+Using React Hooks for useState, useEffect, etc. Why Hooks? If all we have is some components with some static data or a component with a list, life is great.
+
+But once we want to make our components dynamic and morre complex, ofcourse as a result of our apps, we'll need to use React Hooks, which are functions react provide us, to help us to complete various tasks.
+
+For example adding, removing items from the list, toggling the model and fetching the data, just to name a few. The're quite alot of them, but if you understand these two, useState and useEffect, you be in a good shape.
+
+### Get Starter Project
