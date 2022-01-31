@@ -730,5 +730,14 @@ We have the named Exports and the default Exports.
 export const books = [];
 
 // Importing Named Exports Example
-import { books } from "./books";
+import { books } from "./books"; // We don't add the .js extention when importing javascript files in react.
+
+// Using VS Code extensions for react, we can create our component using rafce shortcut, using export default.
+import React from "react";
+
+const Book = () => {
+  return <div></div>;
+};
+
+export default Book;
 ```
