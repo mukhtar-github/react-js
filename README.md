@@ -779,3 +779,7 @@ But once we want to make our components dynamic and morre complex, ofcourse as a
 For example adding, removing items from the list, toggling the model and fetching the data, just to name a few. The're quite alot of them, but if you understand these two, useState and useEffect, you be in a good shape.
 
 ### Get Starter Project
+
+https://github.com/john-smilga/react-advanced-2020
+
+### Install Starter
