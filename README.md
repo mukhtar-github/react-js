@@ -680,4 +680,43 @@ return (
     </button>
   </article>
 );
+
+// Event Target
+// This will be useful where we have alot of inputs and we're looking or targetting at a specific value/button.
+const Book = ({ img, title, author }) => {
+  const clickHandler = () => {
+    console.log(e);
+    console.log(e.target);
+    alert("Hello World");
+  };
+
+  return (
+    <article className="book">
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+      <button type="button" onClick={clickHandler}>
+        Reference Example
+      </button>
+    </article>
+  );
+};
+
+// onMouseOver
+const Book = ({ img, title, author }) => {
+  return (
+    <article
+      className="book"
+      onMouseOver={() => {
+        console.log(title);
+      }}
+    >
+      <img src={img} alt="" />
+      <h1 onClick={() => console.log(title)}>{title}</h1>
+      <h4>{author}</h4>
+      <button type="button">Reference Example</button>
+      <button type="button">More Complex Example</button>
+    </article>
+  );
+};
 ```
