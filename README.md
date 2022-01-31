@@ -617,10 +617,10 @@ const Book = (props) => {
 In to Setup events in react, all we need is an _attribute and the eventHandler_. The difference from Javascript is that since we're using the attributes inline we need to use camelCase.
 
 ```javascript
+// Reference Example
 const Book = ({ img, title, author }) => {
   // attribute, eventHandler
   //onClick, onMouseOver
-  // Reference Example
   const clickHandler = () => {
     alert("Hello World");
   };
@@ -633,6 +633,20 @@ const Book = ({ img, title, author }) => {
       <button type="button" onClick={clickHandler}>
         Reference Example
       </button>
+    </article>
+  );
+};
+
+// Inline Example
+const Book = ({ img, title, author }) => {
+  // attribute, eventHandler
+  //onClick, onMouseOver
+
+  return (
+    <article className="book">
+      <img src={img} alt="" />
+      <h1 onClick={() => console.log(title)}>{title}</h1>
+      <h4>{author}</h4>
     </article>
   );
 };
