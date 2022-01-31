@@ -712,11 +712,23 @@ const Book = ({ img, title, author }) => {
       }}
     >
       <img src={img} alt="" />
-      <h1 onClick={() => console.log(title)}>{title}</h1>
+      <h1>{title}</h1>
       <h4>{author}</h4>
       <button type="button">Reference Example</button>
       <button type="button">More Complex Example</button>
     </article>
   );
 };
+```
+
+## Imports and Exports Statements
+
+We have the named Exports and the default Exports.
+
+```javascript
+// Named Exports Example
+export const books = [];
+
+// Importing Named Exports Example
+import { books } from "./books";
 ```
