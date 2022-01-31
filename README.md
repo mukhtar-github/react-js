@@ -650,4 +650,34 @@ const Book = ({ img, title, author }) => {
     </article>
   );
 };
+
+// complex Example
+const Book = ({ img, title, author }) => {
+  const complexExample = (author) => {
+    console.log(author);
+  };
+  // This setup will automatically console.log() all the three authors.
+  return (
+    <article className="book">
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+      <button type="button" onClick={complexExample(author)}>
+        More Complex Example
+      </button>
+    </article>
+  );
+};
+// While this setup with a function inside the inline onClick, will only console.log() any of the author that is clicked.
+
+return (
+  <article className="book">
+    <img src={img} alt="" />
+    <h1>{title}</h1>
+    <h4>{author}</h4>
+    <button type="button" onClick={() => complexExample(author)}>
+      More Complex Example
+    </button>
+  </article>
+);
 ```
