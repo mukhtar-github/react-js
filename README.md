@@ -58,7 +58,7 @@ ReactDom.render(<Greeting />, document.getElementById("root"));
 ```
 
 - Use proper html semantics or Fragment => React.Fragment or (<></>).
-- Formatting - When returning JSX in a component function, it should be in a closed bracket or the html tag should be on the same line with the return key word to avoid error in react.
+- Formatting - When returning JSX in a component function, it should be in a closed bracket or the html tag should be on the same line with the return keyword to avoid error in react.
 
 ### Nested Components and React Tools
 
@@ -177,9 +177,9 @@ ReactDom.render(<BookList />, document.getElementById("root"));
 
 ### JSX CSS
 
-We can also add our css directly in the JSX. So we need to add a style attribute to the element we're syling.
+We can also add our css directly in the JSX. So we need to add a style attribute to the element we're styling.
 
-If you want to access javascript in the jsx world, you will need to set up the curly braces.
+If you want to access javascript in the JSX world, you need to set up the curly braces.
 
 ```javascript
 import React from "react";
@@ -270,7 +270,7 @@ ReactDom.render(<BookList />, document.getElementById("root"));
 
 When we copy and paste the instances of the Book component, we'll still get the same result. With Props, we can get different instances and values as we set them.
 
-So props is a parameter in our component function, as it is that you can pass in any name as a parameter in a javascript function. Props is an object can be accessed by passing props.key to acomponent function to access the value.
+So props is a parameter in our component function, as it is that you can pass in any name as a parameter in a javascript function. Props as an object can be accessed by passing props.key to a component function to access the value.
 
 ```javascript
 import React from "react";
@@ -379,7 +379,7 @@ const Book = ({ img, title, author }) => {
 };
 ```
 
-### Props - Childeren
+### Props - Children
 
 The Children Props is anything that we render between the opening and the closing tag of the component function. For example, for the first or second book, you can pick which ever you like.
 
@@ -459,7 +459,7 @@ Abba;
 
 We should note that however, when mapping in an array, the returned value of the map function is the total number items in that array.
 
-And one key point to note also is that, we cannot render the book object directly from the map function, that's why we have to use the properties of the book object.
+And one key point to note also is that, we cannot render the book object below, directly from the map function, that's why we have to use the properties of the book object.
 
 ```javascript
 const books = [
@@ -547,7 +547,7 @@ React would want to keep track of changes, ranging from adding, removing, and up
 
 > _Warning: Each child in a list should have a unique "key" prop._
 
-So, to fix this colsole error, we use key prop with unique values to our list, as long as they're changing. But sometimes index keyword because in the map you can access index, if one is sure that the items in the array are not goig to be changing.
+So, to fix this console error, we use key prop with unique values to our list, as long as they're changing. But sometimes we use index keyword, because in the map you can access index, if one is sure that the items in the array are not goig to be changing.
 
 ```javascript
 const books = [
@@ -616,7 +616,7 @@ const Book = (props) => {
 
 ### Event Basics
 
-In to Setup events in react, all we need is an _attribute and the eventHandler_. The difference from Javascript is that since we're using the attributes inline we need to use camelCase.
+Into Setup events in react, all we need is an _attribute and the eventHandler_. The difference from Javascript is that since we're using the attributes inline we need to use camelCase.
 
 ```javascript
 // Reference Example
@@ -774,9 +774,9 @@ npm run build
 
 Using React Hooks for useState, useEffect, etc. Why Hooks? If all we have is some components with some static data or a component with a list, life is great.
 
-But once we want to make our components dynamic and morre complex, ofcourse as a result of our apps, we'll need to use React Hooks, which are functions react provide us, to help us to complete various tasks.
+But once we want to make our components dynamic and more complex, of course as a result of our apps, we'll need to use React Hooks, which are functions react provide us, to help us to complete various tasks.
 
-For example adding, removing items from the list, toggling the model and fetching the data, just to name a few. The're quite alot of them, but if you understand these two, useState and useEffect, you be in a good shape.
+For example adding, removing items from the list, toggling the model and fetching the data, just to name a few. The're quite alot of them, but if you understand these two, useState and useEffect, you'll be in a good shape.
 
 ### Get Starter Project
 
