@@ -6,6 +6,8 @@
 
 To create our first component, we only need two things, an import from react dependency, and a function in our index.js file, and that function is our component, which is a stateless (or Dom for now) functional component that must always return JSX.
 
+> When run npm without arguments, npm install downloads dependencies defined in a package. json file and generates a node_modules folder with the installed modules.
+
 ```javascript
 import React from "react";
 import ReactDom from "react-dom";
